@@ -7,7 +7,7 @@ import { PrismicRichText } from "@prismicio/react";
 import richTextComponents from "@/components/PrismicRichTextComponents";
 import StickyForm from "@/components/StickyForm";
 import "../../styles/blog.css";
-import "./singleBlog.css";
+import "./singleBlog.module.css";
 import FAQ from "@/components/FAQ";
 
 export const revalidate = 60;
