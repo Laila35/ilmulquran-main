@@ -1,6 +1,6 @@
 import { getAllBlogData } from "@/lib/blog-helpers";
 import BlogPageClient from "./components/BlogPageClient";
-import './singleBlog.module.css';
+
 
 export const revalidate = 60;
 
