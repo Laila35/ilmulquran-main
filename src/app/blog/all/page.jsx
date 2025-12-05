@@ -1,5 +1,5 @@
 import { getAllBlogData } from "@/lib/blog-helpers";
-import BlogPageClient from "../components/BlogPageClient";
+import dynamic from "next/dynamic";
 
 export const revalidate = 60;
 
@@ -14,6 +14,12 @@ export const metadata = {
     type: "website",
   },
 };
+
+// Dynamically import the client component to avoid SSR issues
+const BlogPageClient = dynamic(
+  () => import("../components/BlogPageClient"),
+  { ssr: false }
+);
 
 export default async function AllPostsPage() {
   const { categories, posts } = await getAllBlogData();
